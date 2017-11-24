@@ -1,0 +1,80 @@
+/*
+  This file is here to contain some baseline styles
+  but most of your css should live in ../components
+ */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-primary);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  color: var(--color-font-primary);
+  padding: 1rem;
+  margin: 0;
+}
+
+::selection {
+  background-color: var(--color-font-primary);
+  color: var(--color-primary);
+}
+
+a {
+  color: var(--anchor-font-color);
+  transition: color 250ms ease;
+
+  &:hover {
+    color: var(--anchor-font-color-hover);
+  }
+}
+
+input,
+button {
+  font-family: var(--font-sans);
+}
+
+p,
+ul,
+ol,
+blockquote,
+pre,
+code,
+table,
+legend,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0 0 1rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-serif);
+}
+
+hr {
+  border: 0;
+  border-bottom: 1px solid var(--color-primary-light);
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}

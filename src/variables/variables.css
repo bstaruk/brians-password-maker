@@ -1,0 +1,26 @@
+/* IMPORTANT: This file is for :root variables only. */
+
+:root {
+  /* colors */
+  --color-primary: #42315d;
+  --color-primary-light: #5d4579;
+  --color-primary-dark: #2b2040;
+  --color-secondary: #f6f1ff;
+  --color-font-primary: #ebe1ff;
+  --color-font-secondary: #ad9dbf;
+  --color-font-dark: #2b2234;
+  --anchor-font-color: #9cecff;
+  --anchor-font-color-hover: #caf7ff;
+  --border-color: #666;
+
+  /* typography */
+  --font-sans: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-serif: 'Lora', Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif;
+  --font-monospace: Consolas, monaco, monospace;
+
+  /* breakpoints (borrowed from bootstrap 4) */
+  @custom-media --small only screen and (min-width: 34em); /* 544px */
+  @custom-media --medium only screen and (min-width: 48em); /* 768px */
+  @custom-media --large only screen and (min-width: 62em); /* 992px */
+  @custom-media --extra-large only screen and (min-width: 75em); /* 1200px */
+}

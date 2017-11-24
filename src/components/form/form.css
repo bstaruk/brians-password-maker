@@ -1,0 +1,131 @@
+.form {
+  & > fieldset {
+    border: 0;
+    padding: 0;
+    margin: 0;
+  }
+
+  & &__row {
+    margin-bottom: 1.25rem;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  & &__label {
+    display: inline-block;
+    margin-bottom: 0.25rem;
+    cursor: pointer;
+    text-align: start;
+  }
+
+  & &__input,
+  & &__textarea {
+    display: block;
+    width: 100%;
+    max-width: 31.25rem; /* 500/16 */
+    padding: 0.5rem 0.75rem;
+    background-color: var(--color-secondary);
+    border: 0;
+    border-radius: 2px;
+    color: var(--color-font-dark);
+    font-family: var(--font-sans);
+    font-size: 1rem;
+  }
+
+  & &__input {
+    &--display {
+      background-color: var(--color-primary-dark);
+      color: white;
+      font-family: var(--font-monospace);
+      font-size: 1.75rem;
+      font-weight: 400;
+    }
+  }
+
+  & &__button {
+    background-color: var(--color-primary-light);
+    color: var(--color-font-primary);
+    border: 0;
+    padding: 0.5rem 0.75rem;
+    cursor: pointer;
+    outline: none;
+    border-radius: 3px;
+    font-size: 1rem;
+    transition:
+      background-color 300ms ease,
+      transform 300ms ease;
+
+    &:hover {
+      background-color: color(var(--color-primary-light) lightness(44%));
+    }
+
+    &__hit {
+      transform: rotate(-360deg);
+    }
+
+    @media (--medium) {
+      padding: 0.75rem 1rem;
+    }
+  }
+
+  /* checkboxes & checkbox lists */
+  & &__checklist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    & > li {
+      position: relative;
+      margin-bottom: 0.5rem;
+
+      & .form__label {
+        position: relative;
+        z-index: 2;
+        margin: 0;
+        padding: 0.1rem 0 0 2.25rem;
+        min-height: 1.75rem;
+
+        &:hover {
+          & .form__checkbox {
+            & + .form__checkmark {
+              background-color: color(var(--color-primary) lightness(24%));
+            }
+
+            &:checked + .form__checkmark {
+              background-color: color(var(--color-primary-light) lightness(44%));
+            }
+
+            &:active + .form__checkmark {
+              background-color: color(var(--color-primary-light) lightness(56%));
+            }
+          }
+        }
+      }
+    }
+  }
+
+  & &__checkbox {
+    display: none;
+
+    & + .form__checkmark {
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: inline-block;
+      height: 1.75rem;
+      width: 1.75rem;
+      background-color: var(--color-primary-dark);
+      border: 5px solid var(--color-primary-dark);
+      border-radius: 3px;
+      transition: background-color 300ms ease;
+    }
+
+    &:checked {
+      & + .form__checkmark {
+        background-color: var(--color-primary-light);
+      }
+    }
+  }
+}

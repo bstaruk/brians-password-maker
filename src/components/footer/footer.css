@@ -1,0 +1,13 @@
+.footer {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: var(--color-font-secondary);
+
+  & a {
+    color: var(--color-font-secondary);
+
+    &:hover {
+      color: color(var(--color-font-secondary) lightness(85%));
+    }
+  }
+}
