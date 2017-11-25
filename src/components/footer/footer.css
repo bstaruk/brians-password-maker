@@ -7,7 +7,7 @@
     color: var(--color-font-secondary);
 
     &:hover {
-      color: color(var(--color-font-secondary) lightness(85%));
+      color: var(--color-font-accent-alt);
     }
   }
 }

@@ -44,10 +44,14 @@
       background-color: var(--color-primary-dark);
       color: var(--color-font-accent-alt);
       font-family: var(--font-monospace);
-      font-size: 1.75rem;
       font-weight: 400;
       cursor: pointer;
       transition: color 250ms ease;
+      font-size: 1.25rem;
+
+      @media (--medium) {
+        font-size: 1.75rem;
+      }
 
       &:focus {
         cursor: text;
@@ -101,21 +105,10 @@
         margin: 0;
         padding: 0.1rem 0 0 2.25rem;
         min-height: 1.75rem;
+        transition: color 300ms ease;
 
         &:hover {
-          & .form__checkbox {
-            & + .form__checkmark {
-              background-color: var(--color-primary-light);
-            }
-
-            &:checked + .form__checkmark {
-              background-color: var(--color-primary-lighter);
-            }
-
-            &:active + .form__checkmark {
-              background-color: var(--color-primary-lightest);
-            }
-          }
+          color: var(--color-font-accent-alt);
         }
       }
     }

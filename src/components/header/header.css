@@ -1,4 +1,12 @@
 .header {
   margin-bottom: 1rem;
-  color: var(--color-font-accent);
+
+  & > h1 {
+    color: var(--color-font-accent);
+    font-size: 1.5rem;
+
+    @media (--medium) {
+      font-size: 2rem;
+    }
+  }
 }

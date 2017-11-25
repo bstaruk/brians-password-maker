@@ -54,6 +54,7 @@ module.exports = webpackMerge(webpackConfigBase, {
   },
   devServer: {
     contentBase: pathsHelper('static'),
+    host: '0.0.0.0',
     port: 8080,
     watchOptions: {
       poll: 1000
