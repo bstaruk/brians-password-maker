@@ -48,13 +48,13 @@ class PassForm {
     const newPass = makePassword(passLength, useLetters, useNumbers, useSymbols, useSpaces);
 
     // update display fields with new password
-    // 300ms delay allows css transitions to finish
+    // 250ms delay allows css transitions to finish
     setTimeout(() => {
       for (let i = 0; i < this.displayFields.length; i++) {
         this.displayFields[i].value = newPass;
         this.displayFields[i].classList.remove('form__input--display-loading');
       }
-    }, 300);
+    }, 250);
   }
 }
 
