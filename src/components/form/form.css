@@ -25,6 +25,7 @@
     display: block;
     width: 100%;
     max-width: 31.25rem; /* 500/16 */
+    margin: 0;
     padding: 0.5rem 0.75rem;
     background-color: var(--color-secondary);
     border: 0;
@@ -32,6 +33,10 @@
     color: var(--color-font-dark);
     font-family: var(--font-sans);
     font-size: 1rem;
+
+    &[type="number"] {
+      max-width: 4.5rem; /* 72/16 */
+    }
   }
 
   & &__input {
