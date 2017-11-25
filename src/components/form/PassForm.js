@@ -34,6 +34,12 @@ class PassForm {
   }
 
   refreshPassword() {
+    // put loading class on display fields
+    for (let i = 0; i < this.displayFields.length; i++) {
+      this.displayFields[i].classList.add('form__input--display-loading');
+    }
+
+    // parse options & make new password with them
     const passLength = this.lengthField ? this.lengthField.value : 15;
     const useLetters = this.lettersField ? this.lettersField.checked : false;
     const useNumbers = this.numbersField ? this.numbersField.checked : false;
@@ -41,9 +47,14 @@ class PassForm {
     const useSpaces = this.spacesField ? this.spacesField.checked : false;
     const newPass = makePassword(passLength, useLetters, useNumbers, useSymbols, useSpaces);
 
-    for (let i = 0; i < this.displayFields.length; i++) {
-      this.displayFields[i].value = newPass;
-    }
+    // update display fields with new password
+    // 250ms delay allows css transitions to finish
+    setTimeout(() => {
+      for (let i = 0; i < this.displayFields.length; i++) {
+        this.displayFields[i].value = newPass;
+        this.displayFields[i].classList.remove('form__input--display-loading');
+      }
+    }, 250);
   }
 }
 
@@ -62,6 +73,9 @@ const makePassword = (passLength, useLetters, useNumbers, useSymbols, useSpaces)
   if (useNumbers) { charset += charsets.numbers; }
   if (useSymbols) { charset += charsets.symbols; }
   if (useSpaces) { charset += charsets.spaces; }
+
+  // use all dashes if no charset selected
+  if (!charset) { charset += '-'; }
 
   // create password and return it
   let newPassword = '';
