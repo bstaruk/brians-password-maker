@@ -2,12 +2,16 @@
 
 :root {
   /* colors */
-  --color-primary: #42315d;
-  --color-primary-light: #5d4579;
-  --color-primary-dark: #2b2040;
+  --color-primary: #212328;
+  --color-primary-light: #36383d;
+  --color-primary-lighter: #43464b;
+  --color-primary-lightest: #575a5f;
+  --color-primary-dark: #16181d;
   --color-secondary: #f6f1ff;
-  --color-font-primary: #ebe1ff;
-  --color-font-secondary: #ad9dbf;
+  --color-font-primary: #f0f0f0;
+  --color-font-secondary: #d7d7d7;
+  --color-font-accent: #f0b936;
+  --color-font-accent-alt: #86d0f0;
   --color-font-dark: #2b2234;
   --anchor-font-color: #9cecff;
   --anchor-font-color-hover: #caf7ff;

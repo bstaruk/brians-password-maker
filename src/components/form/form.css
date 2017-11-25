@@ -42,10 +42,15 @@
   & &__input {
     &--display {
       background-color: var(--color-primary-dark);
-      color: white;
+      color: var(--color-font-accent-alt);
       font-family: var(--font-monospace);
       font-size: 1.75rem;
       font-weight: 400;
+      cursor: pointer;
+
+      &:focus {
+        cursor: text;
+      }
     }
   }
 
@@ -63,7 +68,7 @@
       transform 300ms ease;
 
     &:hover {
-      background-color: color(var(--color-primary-light) lightness(44%));
+      background-color: var(--color-primary-lighter);
     }
 
     &__hit {
@@ -95,15 +100,15 @@
         &:hover {
           & .form__checkbox {
             & + .form__checkmark {
-              background-color: color(var(--color-primary) lightness(24%));
+              background-color: var(--color-primary-light);
             }
 
             &:checked + .form__checkmark {
-              background-color: color(var(--color-primary-light) lightness(44%));
+              background-color: var(--color-primary-lighter);
             }
 
             &:active + .form__checkmark {
-              background-color: color(var(--color-primary-light) lightness(56%));
+              background-color: var(--color-primary-lightest);
             }
           }
         }
