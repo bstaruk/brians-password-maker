@@ -101,21 +101,10 @@
         margin: 0;
         padding: 0.1rem 0 0 2.25rem;
         min-height: 1.75rem;
+        transition: color 300ms ease;
 
         &:hover {
-          & .form__checkbox {
-            & + .form__checkmark {
-              background-color: var(--color-primary-light);
-            }
-
-            &:checked + .form__checkmark {
-              background-color: var(--color-primary-lighter);
-            }
-
-            &:active + .form__checkmark {
-              background-color: var(--color-primary-lightest);
-            }
-          }
+          color: var(--color-font-accent-alt);
         }
       }
     }
