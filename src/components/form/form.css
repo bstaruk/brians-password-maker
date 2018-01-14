@@ -30,9 +30,9 @@
     background-color: var(--color-primary-dark);
     border: 0;
     border-radius: 2px;
+    font-size: 1rem;
     color: var(--color-font-primary);
     font-family: var(--font-sans);
-    font-size: 1rem;
 
     &[type="number"] {
       max-width: 4.5rem; /* 72/16 */
@@ -47,10 +47,6 @@
       cursor: pointer;
       transition: color 250ms ease;
       font-size: 1.25rem;
-
-      @media (--medium) {
-        font-size: 1.75rem;
-      }
 
       &:focus {
         cursor: text;
@@ -81,10 +77,6 @@
 
     &__hit {
       transform: rotate(-360deg);
-    }
-
-    @media (--medium) {
-      padding: 0.75rem 1rem;
     }
   }
 
