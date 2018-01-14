@@ -7,10 +7,15 @@
   box-sizing: border-box;
 }
 
+:root,
+html {
+  font-size: responsive 0.9rem 1.2rem;
+  font-range: 30rem 50rem;
+}
+
 body {
   background-color: var(--color-primary);
   font-family: var(--font-sans);
-  font-size: 1rem;
   color: var(--color-font-primary);
   padding: 1rem;
   margin: 0;
