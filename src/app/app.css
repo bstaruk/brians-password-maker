@@ -35,6 +35,11 @@ button {
   font-family: var(--font-sans);
 }
 
+hr {
+  border: 0;
+  border-bottom: 1px solid var(--color-primary-light);
+}
+
 p,
 ul,
 ol,
@@ -54,11 +59,6 @@ h5 {
   &:last-child {
     margin-bottom: 0;
   }
-}
-
-hr {
-  border: 0;
-  border-bottom: 1px solid var(--color-primary-light);
 }
 
 .visually-hidden {
