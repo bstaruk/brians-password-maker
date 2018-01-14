@@ -30,6 +30,7 @@
     background-color: var(--color-primary-dark);
     border: 0;
     border-radius: 2px;
+    font-size: 1rem;
     color: var(--color-font-primary);
     font-family: var(--font-sans);
 
